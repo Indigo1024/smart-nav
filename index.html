@@ -20,6 +20,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* 滚动条控制：底部水平滚动条彻底去掉，右侧垂直滚动条隐藏但可滚动 */
+        html, body {
+            overflow-x: hidden;          /* 禁止水平滚动 */
+            scrollbar-width: none;       /* Firefox 隐藏垂直滚动条 */
+            -ms-overflow-style: none;    /* IE/Edge 隐藏垂直滚动条 */
+        }
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;               /* Chrome/Safari/新版Edge 隐藏垂直滚动条 */
+        }
+
         /* 日间模式 (Light) 基础样式 */
         body.theme-light {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
